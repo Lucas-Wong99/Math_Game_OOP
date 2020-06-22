@@ -15,7 +15,6 @@ class Game
 
   def get_curr_player
     current_player = @player_arr.first()
-    p "The current player is #{current_player.name}"
     return current_player
   end
 
@@ -42,7 +41,7 @@ class Game
     while game_status do
       player = get_curr_player
       q = Question.new
-      print q.prompt
+      print "#{player.name}: #{q.prompt}"
       user_answer = gets.chomp
       if user_answer.to_i == q.answer
         puts "Good job! That's correct"
