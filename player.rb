@@ -11,14 +11,3 @@ class Player
   end
 
 end
-
-# player1 = Player.new
-# player2 = Player.new
-
-# p player1
-# player1.lose_life
-# p player1
-# player1.lose_life
-# p player1
-# player1.lose_life
-# p player1.lives

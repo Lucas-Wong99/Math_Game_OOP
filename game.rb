@@ -13,7 +13,8 @@ class Game
     player.lose_life
   end
 
-  def get_curr_player
+  #Returns the current player in the array of players
+  def get_curr_player 
     current_player = @player_arr.first()
     return current_player
   end
@@ -41,7 +42,8 @@ class Game
     while game_status do
       player = get_curr_player
       q = Question.new
-      print "#{player.name}: #{q.prompt}"
+      q.prompt
+      print "#{player.name}: "
       user_answer = gets.chomp
       if user_answer.to_i == q.answer
         puts "Good job! That's correct"
@@ -54,6 +56,4 @@ class Game
       player_lives
     end
   end
-  
 end
-
